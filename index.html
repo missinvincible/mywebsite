@@ -111,15 +111,18 @@
     </article>
     <article>
       <div class="interest-3">
-          <img src='https://i.ibb.co/yVr75ZQ/image.png'>
+          <img class="home" src='https://i.ibb.co/yVr75ZQ/image.png'>
         <p>Traveling <br />
         <small>Before Covid happens my husband and I travel oversea every year. <br/>
         Japan is our favorite country to visit so far!</small></p>
       </div>
      </article>
      <script>
-    window.onbeforeunload = function(event) {
-        event.returnValue = "Write something clever here..";
+    $(document).ready(function(){
+        $(".home").hover(
+            function() {$(this).attr("src","images/aboutR.png");},
+            function() {$(this).attr("src","images/about.png");
+        });
     });
 </script>
 </body>
