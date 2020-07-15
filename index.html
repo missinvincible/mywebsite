@@ -84,7 +84,6 @@
       }
 </style>
 </head>
-
 <header>
     <div class="header">
         <a href="https://www.instagram.com/imbeatrix"><img src="https://i.ibb.co/cYRYwKK/10665171-10152702871985280-3157253333657027084-n.jpg"></a>
@@ -93,18 +92,17 @@
         <h2>Here are some of the things that I like!</h2>
     </div>
 </header> 
-
 <body>
+
     <article class="interest-1">
-        <img src="https://images.squarespace-cdn.com/content/v1/5bebd8e2e17ba3e740c03a6d/1559803563919-R15I5BW4XTFKB2584ZOM/ke17ZwdGBToddI8pDm48kFmfxoboNKufWj-55Bgmc-J7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iXS6XmVv7bUJ418E8Yoc1hjuviiiZmrL38w1ymUdqq4JaGeFUxjM-HeS7Oc-SSFcg/TAE06819-Edit.jpg">
+        <img class="fade" src="https://images.squarespace-cdn.com/content/v1/5bebd8e2e17ba3e740c03a6d/1559803563919-R15I5BW4XTFKB2584ZOM/ke17ZwdGBToddI8pDm48kFmfxoboNKufWj-55Bgmc-J7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iXS6XmVv7bUJ418E8Yoc1hjuviiiZmrL38w1ymUdqq4JaGeFUxjM-HeS7Oc-SSFcg/TAE06819-Edit.jpg">
         <p>Keyboards<br />
         <small>Since I spend a lot of time on my computer, I also spend a lot of time with keyboard. <br />
         I also love building keyboards with different parts! </small></p>
-
     </article>
     <article>
       <div class="interest-2">
-        <img src='https://vignette.wikia.nocookie.net/leagueoflegends/images/7/7b/League_of_Legends_Cover.jpg'>
+        <img class="fade" src='https://vignette.wikia.nocookie.net/leagueoflegends/images/7/7b/League_of_Legends_Cover.jpg'>
         <p>Computer Games<br />
         <small>I spent a lot of time playing video games. <br/>
             My favorite games are: League of Legends, Animal Crossing, and Age of Empires!</small></p>
@@ -112,19 +110,23 @@
     </article>
     <article>
       <div class="interest-3">
-          <img src='https://i.ibb.co/yVr75ZQ/image.png'>
-        <p>Traveling <br />
+          <img class="fade" src='https://i.ibb.co/yVr75ZQ/image.png'>
+        <p>Traveling<br />
         <small>Before Covid happens my husband and I travel oversea every year. <br/>
         Japan is our favorite country to visit so far!</small></p>
       </div>
      </article>
-     <script>
-    $(document).ready(function(){
-        $(".home").hover(
-            function() {$(this).attr("src","images/aboutR.png");},
-            function() {$(this).attr("src","images/about.png");
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".fade").on("mouseenter", function(){
+                $(this).css('opacity','0.2');
+            });
+            $(".fade").on("mouseleave", function(){
+                $(this).css('opacity','1');
+            });
         });
-    });
-</script>
+    </script>
 </body>
+
 </html>
